@@ -16,7 +16,7 @@ class MyGrid(QDialog):
         layout.setSpacing(10)
         self.setLayout(layout)
 
-
+        # Tooltip for the main app window
         QToolTip.setFont(QFont('Times New Roman', 12))
         self.setToolTip('<b>Hi!</b>')
 
@@ -29,6 +29,8 @@ class MyGrid(QDialog):
         # Construct a grid
         for button_name, position in zip(button_names, positions):
             button = QPushButton(button_name)
+            # Change the font of all buttons
             button.setFont(QFont('ComicSans', 18))
+            # Set custom tooltip for each button
             button.setToolTip('<i>{}</i>'.format(button_name))
             layout.addWidget(button, *position)
